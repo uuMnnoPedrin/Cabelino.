@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+nav{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #8767FA;
+    padding: 18px;
+    align-items: center;
+    box-shadow: 0px 3px 15px 0px #5345A1;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+nav ul a{
+    text-decoration: none;
+    text-decoration: white;
+    transition: 0.2s all ease;
+}
+
+nav ul a li{
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 16px;
+    color:white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+}
+
+nav p{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+}
+
+nav button{
+    border: white solid 1px;
+    border-radius: 20px;
+    background-color: transparent;
+    padding: 12px 36px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    transition: all ease 0.3s;
+}
+
+nav ul a:hover{
+    transform: scale(1.09);
+    padding-right: 1px;
+    padding-left: 1px;
+}
+
+nav button:hover{
+    transform: scale(1.1);
+}
+
+body{
+    background-color: #6F5DD8;
+}
+
+.imgcabelino{
+    padding: 10px;
+    border: solid white;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 500px;
+}
+
+.cabelino{
+    width: 300px;
+    height: 300px;
+    border: none;
+    border-radius: 500px;
+    clip-path: circle();
+}
+
+.cabelino img{
+    height: 100%;
+}
+
+.bodyContainer{
+    display: flex;
+    margin-top: 250px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.textContainer{
+    margin-left: 40px;
+    display: flex;
+    flex-flow: column;
+    
+}
+.textContainer .title{
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: 55px;
+}
+
+.textContainer .subtitle{
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.expContainer{
+    margin-top: 25px;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    background-color: #FFFFFF;
+    height: 100%;
+}
+
+.expTitle{
+    font-size: large;
+}
+
+.expGrid{
+    display: grid;
+    grid: 
+    "exp1 exp2" 250px
+    "exp3 exp4" 250px
+    / 1fr 1fr;
+    gap: 30px;
+}
+
+.expGrid div{
+    border: solid;
+}
+
+.exp1{
+    grid-area: exp1;
+}
+
+.exp2{
+    grid-area: exp2;
+}
+
+.exp3{
+    grid-area: exp3;
+}
+
+.exp4{
+    grid-area: exp4;
+}
