@@ -12,6 +12,32 @@
     font-weight: 400;
 }
 
+#center{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.cntTitle{
+    padding-top: 50px;
+    padding-bottom: 25px;
+    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+}
+
+.softDiv{
+    height: 30px;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.softDivGray{
+    height: 40px;
+    width: 100%;
+    background-color: #F8F8F8;
+}
+
 /*  */
 /* Nav */
 /*  */
@@ -51,7 +77,8 @@ nav ul a li{
 nav p{
     font-family: 'Montserrat',sans-serif;
     font-size: 30px;
-    font-weight: 500;
+    font-weight: bold;
+    cursor: default;
     color: white;
 }
 
@@ -107,14 +134,14 @@ body{
 .bodyContainer{
     display: flex;
     margin-top: 75px;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
     
 }
 
 .textContainer{
-    margin-left: 40px;
+    /* margin-left: 40px; */
     display: flex;
     flex-flow: column;
     
@@ -127,21 +154,24 @@ body{
 }
 
 .textContainer .subtitle{
+    font-family: 'Montserrat',sans-serif;
     margin-top: 20px;
     font-size: 25px;
-    font-weight: 500;
+    font-weight: bold;
+    color: #141414;
 }
 
-/*  */
-/* Title for containers */
-/*  */
+.subtitle span{
+    font-family: 'Montserrat',sans-serif;
+    font-weight: bold;
+    color: #141414;
+    transition: all ease .5s;
+    text-decoration: underline 2px rgba(255, 255, 255, 0);
+    text-underline-offset: 5px;
+}
 
-.cntTitle{
-    padding-top: 50px;
-    padding-bottom: 25px;
-    font-size: 40px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
+.subtitle:hover span{
+    text-decoration-color: rgba(255, 255, 255, 1);
 }
 
 /*  */
@@ -220,6 +250,7 @@ body{
 }
 
 .expGrid div a{
+    font-weight: 570;
     text-decoration:underline;
     text-decoration-thickness: 2.7px;
     text-underline-offset: 10px;
@@ -228,7 +259,7 @@ body{
 }
 
 .expGrid div a:hover{
-    color: #E169FF;
+    letter-spacing: .5px;
 }
 
 /*  */
@@ -252,7 +283,7 @@ body{
 }
 
 .workGrid div{
-    border: 1px solid grey;
+/*     border: 1px solid grey; */
     border-radius: 15px;
     padding: 20px;
     color: white;
@@ -265,7 +296,7 @@ body{
 .wrk1{
     grid-area: wrk1;
     background-size: cover;
-    background-image: url(https://cdna.artstation.com/p/assets/images/images/028/641/936/large/eshan-treasure-chest.jpg?1595064041&dl=1);
+    background-image: url(https://preview.colorlib.com/theme/calvin/assets/img/gallery/xgallery1.png.pagespeed.ic.Up3oFhc0AB.webp);
     background-position: center; 
     transition: filter ease .4s, visibility ease 1s;
     font-family: 'Montserrat',sans-serif;;
@@ -283,7 +314,7 @@ body{
 .wrk2{
     grid-area: wrk2;
     background-size: cover;
-    background-image: url(https://i.pinimg.com/originals/20/95/d6/2095d63e84c71c306b6c18af555e59e1.jpg);
+    background-image: url(https://preview.colorlib.com/theme/calvin/assets/img/gallery/xgallery2.png.pagespeed.ic.fszgEo6dsc.webp);
     background-position: center;
     transition: filter ease .4s, visibility ease 1s;
     font-family: 'Montserrat',sans-serif;;
@@ -302,7 +333,7 @@ body{
     grid-area: wrk3;
     background-size: cover;
     background-position: center;
-    background-image: url(https://s.zst.com.br/cms-assets/2021/05/o-que-e-podcast.jpg);
+    background-image: url(https://preview.colorlib.com/theme/calvin/assets/img/gallery/xgallery3.png.pagespeed.ic.qnoV8U_8Hx.webp);
     transition: filter ease .4s, visibility ease 1s;
     font-family: 'Montserrat',sans-serif;;
     font-size: 25px;
@@ -320,7 +351,7 @@ body{
     grid-area: wrk4;
     background-size: cover;
     background-position: center;
-    background-image: url(https://images.ctfassets.net/p0qf7j048i0q/7y7RtMKuzudxAtN68NzU3b/dfd2a4cdc7c9da04ad78fe8245e912a1/G911029504.jpg);
+    background-image: url(https://preview.colorlib.com/theme/calvin/assets/img/gallery/xgallery4.png.pagespeed.ic.3BAHAxRLqd.webp);
     transition: filter ease .4s, visibility ease 1s;
     font-family: 'Montserrat',sans-serif;;
     font-size: 25px;
@@ -338,15 +369,284 @@ body{
 /* aboutContainer */
 /*  */
 
-.softDiv{
-    height: 30px;
-    width: 100%;
-    background-color: #FFFFFF;
-}
-
 .aboutContainer{
     padding-left: 10%;
     padding-right: 10%;
     width: 100%;
     background-color: #F8F8F8;
+}
+
+.aboutGrid{
+    display: grid;
+    grid: 
+    "subText UID" 27px
+    "subText UXD" 27px
+    "bottomText Ill" 27px
+    / 1fr 1fr;
+    gap: 27px;
+}
+
+.aboutSubText{
+    grid-area: subText;
+    
+}
+
+.aboutUID{
+    grid-area: UID;
+    text-decoration: #8767FA underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
+}
+
+.aboutUXD{
+    grid-area: UXD;
+    text-decoration: #8767FA underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
+}
+
+.aboutIll{
+    grid-area: Ill;
+    text-decoration: #8767FA underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
+}
+
+.aboutBottomText{
+    grid-area: bottomText;
+    color: #8767FA;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.aboutSoftwares{
+    background-color: #F8F8F8;
+    width: 100%;
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutSoftwares div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    justify-content: center;
+    width: 190px;
+    height: 190px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 10px 15px 0px lightgray;
+    transition: transform ease .5s;
+}
+
+.aboutSoftwares div:hover{
+    transform: scale(1.05);
+}
+
+/*  */
+/* clientContainer */
+/*  */
+
+.clientContainer{
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.clientText{
+    border: solid 2px #F4F0EE;
+    text-align: center;
+    padding: 50px 3% 0px 3%;
+    border-radius: 10px;
+    width: 50%;
+    background-color: #FFFBF9;
+}
+
+.clientPicture{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    display: grid;
+    grid: 
+    "cPic cName cName"
+    "cPic cPlace cPlace"
+    / 70px 70px;
+}
+
+.clientPicture a{
+    text-decoration: none;
+    font-family: 'Montserrat',sans-serif;
+    color: black;
+    font-size: 14px;
+    text-decoration: underline 2px rgba(135, 103, 250, 0);
+    transition: text-decoration-color ease .5s;
+    text-underline-offset: 1px;
+}
+
+.clientPicture a:hover{
+    text-decoration-color: rgba(135, 103, 250, 1);
+}
+
+.clientPicture img{
+    border: solid 2px white;
+    border-radius: 500px;
+    clip-path: circle();
+    height: 50px;
+    width: 50px;
+}
+
+.carequinoPic{
+    grid-area: cPic;
+}
+
+.carequinoName{
+    grid-area: cName;
+    color: #8767FA;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.carequinoPlace{
+    font-family: 'Montserrat',sans-serif;
+    grid-area: cPlace;
+    font-size: 14px;
+}
+
+/*  */
+/* newsContainer */
+/*  */
+
+.newsContainer{
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    background-color: #F8F8F8;
+}
+
+.newsGrid{
+    display: grid;
+    grid: 
+    "new1 new2" 350px
+    / 1fr 1fr;
+    gap: 30px;
+}
+
+.newsGrid div{
+    border-radius: 10px;
+    transition: transform ease .5s;
+    box-shadow: 0px 10px 15px 0px lightgray;
+}
+
+.newsGrid div:hover{
+    transform: scale(1.03);
+}
+
+.newsGrid div p{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px 10px 0px 0px;
+    background-color: rgba(2, 8, 43.5);
+    padding: 5px 3% 5px 3%;
+    font-weight: bold;
+    text-shadow: 2px 0 0 #231F20, -2px 0 0 #231F20, 0 2px 0 #231F20, 0 -2px 0 #231F20, 1px 1px #231F20, -1px -1px 0 #231F20, 1px -1px 0 #231F20, -1px 1px 0 #231F20;
+}
+
+.newsGrid div p button{
+    background: none;
+    border: 2px solid white;
+
+    cursor: pointer;
+    color: white;
+    padding: 5px;
+    margin-left: 20px;
+    border-radius: 15px;
+}
+
+.new1{
+    grid-area: new1;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://preview.colorlib.com/theme/calvin/assets/img/gallery/xhome-blog1.png.pagespeed.ic.I2U4ILIwPP.webp);
+
+}
+
+.new2{
+    grid-area: new2;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://preview.colorlib.com/theme/calvin/assets/img/gallery/xhome-blog2.png.pagespeed.ic.Spsxmf_jSP.webp);
+}
+
+footer{
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    color: white;
+    background-color: #231F20;
+}
+
+.footerLogo{
+    padding-top: 65px;
+    padding-bottom: 20px;
+    width: 100%;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: default;
+    color: #8767FA;
+    grid-area: fLogo;
+}
+
+.footerSubTitle{
+    font-size: 16px;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 500;
+    grid-area: fSubTitle;
+    padding-bottom: 30px;
+}
+
+.footerSocial{
+    display: flex;
+}
+
+.footerSocial div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    background-color: rgba(135, 103, 250, .3);
+    transition: transform ease .5s;
+}
+
+.footerSocial div:hover{
+    transform: scale(1.15);
+}
+
+.footerSocial i{
+    color: #8767FA;
+}
+
+.footerCopyright{
+    display: flex;
+    margin-top: 75px;
+    padding-bottom: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.footerCopyright p{
+    font-family: 'Montserrat',sans-serif;
 }
