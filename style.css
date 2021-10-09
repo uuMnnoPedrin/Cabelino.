@@ -12,6 +12,10 @@
     font-weight: 400;
 }
 
+/*  */
+/* Nav */
+/*  */
+
 nav{
     display: flex;
     flex-flow: row wrap;
@@ -72,6 +76,10 @@ nav button:hover{
     transform: scale(1.1);
 }
 
+/*  */
+/* imgContainer */
+/*  */
+
 body{
     background-color: #6F5DD8;
 }
@@ -98,7 +106,7 @@ body{
 
 .bodyContainer{
     display: flex;
-    margin-top: 250px;
+    margin-top: 75px;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -114,6 +122,7 @@ body{
 .textContainer .title{
     font-family: 'Oswald', sans-serif;
     color: white;
+    line-height: 1em;
     font-size: 55px;
 }
 
@@ -123,44 +132,221 @@ body{
     font-weight: 500;
 }
 
+/*  */
+/* Title for containers */
+/*  */
+
+.cntTitle{
+    padding-top: 50px;
+    padding-bottom: 25px;
+    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+}
+
+/*  */
+/* expContainer */
+/*  */
+
 .expContainer{
-    margin-top: 25px;
+    margin-top: 75px;
     padding-left: 10%;
     padding-right: 10%;
     width: 100%;
     background-color: #FFFFFF;
-    height: 100%;
-}
-
-.expTitle{
-    font-size: large;
 }
 
 .expGrid{
     display: grid;
     grid: 
-    "exp1 exp2" 250px
-    "exp3 exp4" 250px
+    "exp1 exp2" 270px
+    "exp3 exp4" 270px
     / 1fr 1fr;
     gap: 30px;
 }
 
 .expGrid div{
-    border: solid;
+    border: solid 1px #F5F5F5;
+    border-radius: 5px;
+    padding: 20px;
 }
 
 .exp1{
     grid-area: exp1;
+    transition: all 0.2s ease;
+}
+
+.exp1:hover{
+    box-shadow: 7px 7px 15px 0px #EDEDED;
 }
 
 .exp2{
     grid-area: exp2;
+    transition: all 0.2s ease;
+}
+
+.exp2:hover{
+    box-shadow: -7px 7px 15px 0px #EDEDED;
 }
 
 .exp3{
     grid-area: exp3;
+    transition: all 0.2s ease;      
+}
+
+.exp3:hover{
+    box-shadow: 7px -7px 15px 0px #EDEDED;
 }
 
 .exp4{
     grid-area: exp4;
+    transition: all 0.2s ease;
+}
+
+.exp4:hover{
+    box-shadow: -7px -7px 15px 0px #EDEDED;
+}
+
+.expTitle{
+    font-weight: bold;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 23px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.expGrid div p{
+    padding-bottom: 10px;
+}
+
+.expGrid div a{
+    text-decoration:underline;
+    text-decoration-thickness: 2.7px;
+    text-underline-offset: 10px;
+    color: #8767FA;
+    transition: all ease .5s;
+}
+
+.expGrid div a:hover{
+    color: #E169FF;
+}
+
+/*  */
+/* workContainer */
+/*  */
+
+.workContainer{
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.workGrid{
+    display: grid;
+    grid: 
+    "wrk1 wrk2" 350px
+    "wrk3 wrk4" 350px
+    / 1fr 1fr;
+    gap: 30px;
+}
+
+.workGrid div{
+    border: 1px solid grey;
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+}
+
+.workGrid div p{
+    visibility: hidden;
+}
+
+.wrk1{
+    grid-area: wrk1;
+    background-size: cover;
+    background-image: url(https://cdna.artstation.com/p/assets/images/images/028/641/936/large/eshan-treasure-chest.jpg?1595064041&dl=1);
+    background-position: center; 
+    transition: filter ease .4s, visibility ease 1s;
+    font-family: 'Montserrat',sans-serif;;
+    font-size: 25px;
+}
+
+.wrk1:hover{
+    filter: brightness(65%);
+}
+
+.wrk1:hover p{
+    visibility: visible;
+}
+
+.wrk2{
+    grid-area: wrk2;
+    background-size: cover;
+    background-image: url(https://i.pinimg.com/originals/20/95/d6/2095d63e84c71c306b6c18af555e59e1.jpg);
+    background-position: center;
+    transition: filter ease .4s, visibility ease 1s;
+    font-family: 'Montserrat',sans-serif;;
+    font-size: 25px;
+}
+
+.wrk2:hover{
+    filter: brightness(65%);
+}
+
+.wrk2:hover p{
+    visibility: visible;
+}
+
+.wrk3{
+    grid-area: wrk3;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://s.zst.com.br/cms-assets/2021/05/o-que-e-podcast.jpg);
+    transition: filter ease .4s, visibility ease 1s;
+    font-family: 'Montserrat',sans-serif;;
+    font-size: 25px;
+}
+
+.wrk3:hover{
+    filter: brightness(65%); 
+}
+
+.wrk3:hover p{
+    visibility: visible;
+}
+
+.wrk4{
+    grid-area: wrk4;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://images.ctfassets.net/p0qf7j048i0q/7y7RtMKuzudxAtN68NzU3b/dfd2a4cdc7c9da04ad78fe8245e912a1/G911029504.jpg);
+    transition: filter ease .4s, visibility ease 1s;
+    font-family: 'Montserrat',sans-serif;;
+    font-size: 25px;
+}
+
+.wrk4:hover{
+    filter: brightness(65%);
+}
+
+.wrk4:hover p{
+    visibility: visible;
+}
+
+/*  */
+/* aboutContainer */
+/*  */
+
+.softDiv{
+    height: 30px;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.aboutContainer{
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    background-color: #F8F8F8;
 }
